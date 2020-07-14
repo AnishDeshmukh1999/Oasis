@@ -11,12 +11,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Oasis\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Oasis\Events\Event.h" />
+    <ClInclude Include="src\Oasis\Events\KeyEvent.h" />
+    <ClInclude Include="src\Oasis\Events\MouseEvent.h" />
+    <ClInclude Include="src\Oasis\Log.h" />
     <ClInclude Include="src\Oasis.h" />
     <ClInclude Include="src\Oasis\Application.h" />
     <ClInclude Include="src\Oasis\Core.h" />
     <ClInclude Include="src\Oasis\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Oasis\Log.cpp" />
     <ClCompile Include="src\Oasis\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -65,6 +71,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>OE_PLATFORM_WINDOWS;OE_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -79,6 +86,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>OE_PLATFORM_WINDOWS;OE_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
