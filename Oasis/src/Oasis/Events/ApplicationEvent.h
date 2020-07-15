@@ -10,6 +10,11 @@ namespace Oasis {
 		WindowCloseEvent() {}
 		EVENT_CLASS_TYPE(WindowClose);
 		EVENT_CLASS_CATEGORY((int) EventCategory::EventCategoryApplication);
+		std::string toString() const override {
+			std::stringstream ss;
+			ss << " WindowCloseEvent ";
+			return ss.str();
+		}
 	};
 
 	class OE_API WindowResizeEvent : public Event {

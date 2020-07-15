@@ -11,6 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\oepch.h" />
+    <ClInclude Include="src\Oasis\MainWindow.h" />
     <ClInclude Include="src\Oasis\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Oasis\Events\Event.h" />
     <ClInclude Include="src\Oasis\Events\KeyEvent.h" />
@@ -20,8 +22,11 @@
     <ClInclude Include="src\Oasis\Application.h" />
     <ClInclude Include="src\Oasis\Core.h" />
     <ClInclude Include="src\Oasis\EntryPoint.h" />
+    <ClInclude Include="src\Oasis\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\oepch.cpp" />
+    <ClCompile Include="src\Oasis\MainWindow.cpp" />
     <ClCompile Include="src\Oasis\Log.cpp" />
     <ClCompile Include="src\Oasis\Application.cpp" />
   </ItemGroup>
@@ -71,12 +76,17 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>OE_PLATFORM_WINDOWS;OE_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\spdlog\include;$(SolutionDir)Oasis\vendor\glfw-3.3.2\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Oasis\vendor\glfw-3.3.2\lib-vc2019</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y "$(OutDir)Oasis.dll" "$(SolutionDir)bin\$(Configuration)-$(Platform)\Sandbox\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -86,13 +96,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>OE_PLATFORM_WINDOWS;OE_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\spdlog\include;$(SolutionDir)Oasis\vendor\glfw-3.3.2\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Oasis\vendor\glfw-3.3.2\lib-vc2019</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
