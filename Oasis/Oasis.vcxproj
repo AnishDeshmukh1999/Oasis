@@ -11,6 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Oasis\LayerStack.h" />
+    <ClInclude Include="src\Oasis\Layer.h" />
     <ClInclude Include="src\oepch.h" />
     <ClInclude Include="src\Oasis\MainWindow.h" />
     <ClInclude Include="src\Oasis\Events\ApplicationEvent.h" />
@@ -23,12 +25,21 @@
     <ClInclude Include="src\Oasis\Core.h" />
     <ClInclude Include="src\Oasis\EntryPoint.h" />
     <ClInclude Include="src\Oasis\Window.h" />
+    <ClInclude Include="vendor\loguru\loguru.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Oasis\LayerStack.cpp" />
+    <ClCompile Include="src\Oasis\Layer.cpp" />
     <ClCompile Include="src\oepch.cpp" />
     <ClCompile Include="src\Oasis\MainWindow.cpp" />
     <ClCompile Include="src\Oasis\Log.cpp" />
     <ClCompile Include="src\Oasis\Application.cpp" />
+    <ClCompile Include="vendor\loguru\loguru.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GLFW\src\glfw.vcxproj">
+      <Project>{93d0dad9-7849-3963-a6da-29eb4c8485e5}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -76,13 +87,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>OE_PLATFORM_WINDOWS;OE_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\spdlog\include;$(SolutionDir)Oasis\vendor\glfw-3.3.2\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\loguru;$(SolutionDir)Oasis\vendor\spdlog\include;$(SolutionDir)Oasis\vendor\glfw-3.3.2\include;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)Oasis\vendor\glfw-3.3.2\lib-vc2019</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glfw3dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y "$(OutDir)Oasis.dll" "$(SolutionDir)bin\$(Configuration)-$(Platform)\Sandbox\"</Command>

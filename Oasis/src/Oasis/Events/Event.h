@@ -20,8 +20,8 @@ namespace Oasis {
 		EventCategoryMouseButton = BIT(4)
 	};
 
-#define EVENT_CLASS_TYPE(type) static EventType getStaticEvent() {return EventType::##type;} \
-							   virtual EventType getEventType() const override {return getStaticEvent();} \
+#define EVENT_CLASS_TYPE(type) static EventType getStaticType() {return EventType::##type;} \
+							   virtual EventType getEventType() const override {return getStaticType();} \
 							   virtual const char* getName() const override {return #type;}
 
 #define EVENT_CLASS_CATEGORY(category) virtual int getCategoryFlags() const override {return category;}
@@ -32,6 +32,7 @@ namespace Oasis {
 		virtual EventType getEventType() const = 0;
 		virtual const char* getName() const = 0;
 		virtual int getCategoryFlags() const = 0;
+		bool isHandled() { return m_handled; }
 		virtual std::string toString() const { return getName(); }
 	protected:
 		bool m_handled = false;

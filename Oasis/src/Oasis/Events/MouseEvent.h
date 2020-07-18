@@ -6,7 +6,7 @@ namespace Oasis {
 	public:
 		MouseMovedEvent(float x, float y)
 			: m_X(x),m_Y(y){}
-		EVENT_CLASS_CATEGORY(EventCategoryInput | EventCategoryMouse);
+		EVENT_CLASS_CATEGORY((int)EventCategory::EventCategoryInput | (int)EventCategory::EventCategoryMouse);
 		EVENT_CLASS_TYPE(MouseMoved);
 		inline float getX() const { return m_X; }
 		inline float getY() const { return m_Y; }
@@ -22,7 +22,7 @@ namespace Oasis {
 	public:
 		MouseScrolledEvent(float xoffset, float yoffset)
 			: m_XOffset(xoffset), m_YOffset(yoffset) {}
-		EVENT_CLASS_CATEGORY(EventCategory::EventCategoryInput | EventCategory::EventCategoryMouse);
+		EVENT_CLASS_CATEGORY((int)EventCategory::EventCategoryInput | (int)EventCategory::EventCategoryMouse);
 		EVENT_CLASS_TYPE(MouseScrolled);
 		inline float getX() const { return m_XOffset; }
 		inline float getY() const { return m_YOffset; }
@@ -36,7 +36,7 @@ namespace Oasis {
 	};
 	class OE_API MouseButtonEvent : public Event {
 	public:
-		EVENT_CLASS_CATEGORY(EventCategoryInput | EventCategoryMouse);
+		EVENT_CLASS_CATEGORY((int)EventCategory::EventCategoryInput | (int)EventCategory::EventCategoryMouse);
 		inline int getMouseButton() { return m_button; }
 	protected:
 		MouseButtonEvent(int b)

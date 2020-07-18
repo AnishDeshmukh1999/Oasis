@@ -6,7 +6,7 @@ namespace Oasis {
 	class OE_API KeyEvent : public Event {
 	public:
 		inline int getKeyCode() const { return m_keycode; }
-		EVENT_CLASS_CATEGORY(EventCategory::EventCategoryKeyboard | EventCategory::EventCategoryInput)
+		EVENT_CLASS_CATEGORY((int)EventCategory::EventCategoryKeyboard | (int)EventCategory::EventCategoryInput)
 	protected:
 		KeyEvent(int keycode): m_keycode(keycode) {}
 		int m_keycode;
