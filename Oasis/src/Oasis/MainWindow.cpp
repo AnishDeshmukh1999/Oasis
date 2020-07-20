@@ -3,6 +3,7 @@
 #include"Events/ApplicationEvent.h"
 #include"Events/MouseEvent.h"
 #include"glad/glad.h"
+#include<signal.h>
 namespace Oasis {
 	static bool s_GLFWInitialised = false;
 	static void GLFWErrorCallback(int error_code, const char* description) {
@@ -34,6 +35,7 @@ namespace Oasis {
 		m_window = glfwCreateWindow((int)prop.width, (int)prop.height, prop.title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_window);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		OE_ASSERT(status, "Failed to initialise Glad");
 		glfwSetWindowUserPointer(m_window, &m_data);
 		setVSync(true);
 
