@@ -1,0 +1,2 @@
+C:\dev\Oasis\Glad\Debug\glad.pdb
+C:\dev\Oasis\Glad\glad.dir\Debug\glad.pdb

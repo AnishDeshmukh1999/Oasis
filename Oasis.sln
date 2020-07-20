@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Oasis", "Oasis\Oasis.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfw", "GLFW\src\glfw.vcxproj", "{93D0DAD9-7849-3963-A6DA-29EB4C8485E5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glad", "Glad\glad.vcxproj", "{836D40D2-B6F5-378C-AA19-A2CA242AA1E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{93D0DAD9-7849-3963-A6DA-29EB4C8485E5}.Release|x64.Build.0 = Release|x64
 		{93D0DAD9-7849-3963-A6DA-29EB4C8485E5}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
 		{93D0DAD9-7849-3963-A6DA-29EB4C8485E5}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
+		{836D40D2-B6F5-378C-AA19-A2CA242AA1E7}.Debug|x64.ActiveCfg = Debug|x64
+		{836D40D2-B6F5-378C-AA19-A2CA242AA1E7}.Debug|x64.Build.0 = Debug|x64
+		{836D40D2-B6F5-378C-AA19-A2CA242AA1E7}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{836D40D2-B6F5-378C-AA19-A2CA242AA1E7}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{836D40D2-B6F5-378C-AA19-A2CA242AA1E7}.Release|x64.ActiveCfg = Release|x64
+		{836D40D2-B6F5-378C-AA19-A2CA242AA1E7}.Release|x64.Build.0 = Release|x64
+		{836D40D2-B6F5-378C-AA19-A2CA242AA1E7}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{836D40D2-B6F5-378C-AA19-A2CA242AA1E7}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

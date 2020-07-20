@@ -9,6 +9,7 @@
     <ClInclude Include="C:\dev\Oasis\Glad\include\glad\glad.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\KHR\khrplatform.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\dev\glad-master\CMakeLists.txt" />

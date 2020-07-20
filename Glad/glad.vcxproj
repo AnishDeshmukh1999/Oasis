@@ -266,6 +266,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="C:\dev\Oasis\Glad\src\glad.c" />
     <ClInclude Include="C:\dev\Oasis\Glad\include\glad\glad.h" />
+    <ClInclude Include="include\KHR\khrplatform.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\dev\Oasis\Glad\ZERO_CHECK.vcxproj">

@@ -38,6 +38,9 @@
     <ClCompile Include="vendor\loguru\loguru.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Glad\glad.vcxproj">
+      <Project>{836d40d2-b6f5-378c-aa19-a2ca242aa1e7}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\GLFW\src\glfw.vcxproj">
       <Project>{93d0dad9-7849-3963-a6da-29eb4c8485e5}</Project>
     </ProjectReference>
