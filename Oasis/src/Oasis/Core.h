@@ -1,4 +1,5 @@
 #pragma once
+#include"loguru.hpp"
 #ifdef OE_PLATFORM_WINDOWS
 	#ifdef OE_BUILD_DLL
 		#define OE_API _declspec(dllexport)
@@ -9,4 +10,5 @@
 	#error Oasis only supports Windows!
 #endif
 
+#define OE_ASSERT(x,...) {if(!x) {LOG_F(FATAL,"Assertion Failed: {0}",__VA_ARGS__);raise(SIGTRAP);}}
 #define BIT(x) (1 << (x))

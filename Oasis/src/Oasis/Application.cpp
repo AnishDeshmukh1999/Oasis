@@ -2,6 +2,7 @@
 #include "Application.h"
 #include"Events/ApplicationEvent.h"
 #include"Events/ApplicationEvent.h"
+#include <glad\glad.h>	
 namespace Oasis {
 #define EVENT_BIND_FN(x) std::bind(&x,this,std::placeholders::_1)
 	Application::Application()

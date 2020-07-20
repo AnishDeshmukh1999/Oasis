@@ -89,9 +89,9 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>OE_PLATFORM_WINDOWS;OE_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLFW_INCLUDE_NONE;OE_PLATFORM_WINDOWS;OE_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\GLAD\include;$(SolutionDir)Oasis\vendor\loguru;$(SolutionDir)Oasis\vendor\spdlog\include;$(SolutionDir)Oasis\vendor\glfw-3.3.2\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Glad\include;$(SolutionDir)Oasis\vendor\loguru;$(SolutionDir)Oasis\vendor\spdlog\include;$(SolutionDir)Oasis\vendor\glfw-3.3.2\include;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>oepch.h</PrecompiledHeaderFile>
