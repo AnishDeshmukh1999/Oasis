@@ -1,8 +1,7 @@
+#include"../../oepch.h"
 #pragma once
 
 #include"Event.h"
-#include<sstream>
-
 namespace Oasis {
 
 	class OE_API WindowCloseEvent : public Event {

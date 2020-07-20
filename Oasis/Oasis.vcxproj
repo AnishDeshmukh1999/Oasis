@@ -19,7 +19,6 @@
     <ClInclude Include="src\Oasis\Events\Event.h" />
     <ClInclude Include="src\Oasis\Events\KeyEvent.h" />
     <ClInclude Include="src\Oasis\Events\MouseEvent.h" />
-    <ClInclude Include="src\Oasis\Log.h" />
     <ClInclude Include="src\Oasis.h" />
     <ClInclude Include="src\Oasis\Application.h" />
     <ClInclude Include="src\Oasis\Core.h" />
@@ -30,9 +29,11 @@
   <ItemGroup>
     <ClCompile Include="src\Oasis\LayerStack.cpp" />
     <ClCompile Include="src\Oasis\Layer.cpp" />
-    <ClCompile Include="src\oepch.cpp" />
+    <ClCompile Include="src\oepch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">oepch.h</PrecompiledHeaderFile>
+    </ClCompile>
     <ClCompile Include="src\Oasis\MainWindow.cpp" />
-    <ClCompile Include="src\Oasis\Log.cpp" />
     <ClCompile Include="src\Oasis\Application.cpp" />
     <ClCompile Include="vendor\loguru\loguru.cpp" />
   </ItemGroup>
@@ -87,8 +88,10 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>OE_PLATFORM_WINDOWS;OE_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\loguru;$(SolutionDir)Oasis\vendor\spdlog\include;$(SolutionDir)Oasis\vendor\glfw-3.3.2\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\GLAD\include;$(SolutionDir)Oasis\vendor\loguru;$(SolutionDir)Oasis\vendor\spdlog\include;$(SolutionDir)Oasis\vendor\glfw-3.3.2\include;</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>oepch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

@@ -1,6 +1,6 @@
+#include"../oepch.h"
 #pragma once
 #include"Core.h"
-//#include"../oepch.h"
 #include "Events/Event.h"
 #include"Layer.h"
 namespace Oasis {

@@ -1,10 +1,7 @@
-#include "../oepch.h"
 #include "MainWindow.h"
 #include"Events/KeyEvent.h"
 #include"Events/ApplicationEvent.h"
 #include"Events/MouseEvent.h"
-#include "Log.h"
-#include"GLFW/glfw3.h"
 namespace Oasis {
 	static bool s_GLFWInitialised = false;
 	static void GLFWErrorCallback(int error_code, const char* description) {

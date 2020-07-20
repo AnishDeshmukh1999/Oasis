@@ -1,6 +1,6 @@
+#include "../oepch.h"
 #pragma once
 #include "Window.h"
-#include <GLFW\glfw3.h>
 #include"loguru.hpp"
 namespace Oasis {
 	class MainWindow : public Window

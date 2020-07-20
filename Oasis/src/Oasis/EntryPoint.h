@@ -1,6 +1,5 @@
-#pragma once
-#include"spdlog/fmt/bundled/format.h"
 #include"../oepch.h"
+#pragma once
 #include"loguru.hpp"
 #ifdef OE_PLATFORM_WINDOWS
 

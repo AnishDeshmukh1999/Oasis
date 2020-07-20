@@ -1,5 +1,4 @@
 #include<Oasis.h>
-#include"spdlog/fmt/bundled/core.h"
 #include"loguru.hpp"
 #include"loguru.cpp"
 class ExampleLayer : public Oasis::Layer {

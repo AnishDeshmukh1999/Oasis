@@ -1,8 +1,6 @@
+#include"../../oepch.h"
 #pragma once
 #include "../Core.h"
-#include <string>
-#include "spdlog/fmt/ostr.h"
-#include<functional>
 namespace Oasis {
 	enum class EventType {
 		None = 0,

@@ -56,7 +56,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>OE_PLATFORM_WINDOWS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\loguru;$(SolutionDir)Oasis\src;$(SolutionDir)Oasis\vendor\spdlog\include;$(SolutionDir)Oasis\vendor\glfw-3.3.2\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Oasis\vendor\GLAD\include;$(SolutionDir)Oasis\vendor\loguru;$(SolutionDir)Oasis\src;$(SolutionDir)Oasis\vendor\spdlog\include;$(SolutionDir)Oasis\vendor\glfw-3.3.2\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

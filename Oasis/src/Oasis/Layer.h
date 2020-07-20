@@ -1,5 +1,7 @@
+#include"../oepch.h"
 #pragma once
 #include"Core.h"
+	
 #include "Events/Event.h"
 namespace Oasis {
 	class OE_API Layer {

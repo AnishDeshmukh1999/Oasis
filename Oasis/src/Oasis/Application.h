@@ -1,3 +1,4 @@
+#include"../oepch.h"
 #pragma once
 #include"Core.h"
 #include"Window.h"
@@ -5,6 +6,7 @@
 #include"Layer.h"
 #include"Events/ApplicationEvent.h"
 #include"loguru.hpp"
+
 namespace Oasis {
 	class  OE_API Application
 	{

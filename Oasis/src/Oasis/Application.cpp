@@ -1,9 +1,7 @@
+#include"../oepch.h"
 #include "Application.h"
 #include"Events/ApplicationEvent.h"
-#include"Log.h"
-#include"GLFW/glfw3.h"
 #include"Events/ApplicationEvent.h"
-#include"../oepch.h"
 namespace Oasis {
 #define EVENT_BIND_FN(x) std::bind(&x,this,std::placeholders::_1)
 	Application::Application()

@@ -1,0 +1,4 @@
+C:/dev/Oasis/Glad/CMakeFiles/glad-generate-files.dir
+C:/dev/Oasis/Glad/CMakeFiles/glad.dir
+C:/dev/Oasis/Glad/CMakeFiles/ALL_BUILD.dir
+C:/dev/Oasis/Glad/CMakeFiles/ZERO_CHECK.dir
