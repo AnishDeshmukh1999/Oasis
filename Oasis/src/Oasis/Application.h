@@ -17,6 +17,7 @@ namespace Oasis {
 		void onEvent(Event& e);
 		void pushLayer(Layer* layer);
 		void pushOverlay(Layer* layer);
+		static void setRunning(bool run);
 	private:
 		bool onWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> m_window;

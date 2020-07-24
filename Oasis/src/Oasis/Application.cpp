@@ -16,8 +16,6 @@ namespace Oasis {
 	}
 	void Application::Run() {
 		while (m_running) {
-			glClearColor(1, 0, 1, 1);
-			glClear(GL_COLOR_BUFFER_BIT);
 			for (Layer* layer : m_layerStack) {
 				layer->onUpdate();
 			}
@@ -29,7 +27,7 @@ namespace Oasis {
 	{
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(EVENT_BIND_FN(Application::onWindowClose));
-		LOG_F(ERROR,"%s",e.toString().c_str());
+		LOG_F(INFO,"%s",e.toString().c_str());
 		for (auto it = m_layerStack.end(); it != m_layerStack.begin();) {
 			(*--it)->onEvent(e);
 			if (e.isHandled()) {

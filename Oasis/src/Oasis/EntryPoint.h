@@ -11,6 +11,8 @@ int main(int argc, char** argv) {
 	auto app = Oasis::CreateApplication();
 	app->Run();
 	delete app;
+	LOG_F(INFO, "Shutting down GLFW");
+	glfwTerminate();
 }
 
 #endif

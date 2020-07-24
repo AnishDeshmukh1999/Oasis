@@ -45,6 +45,13 @@
       <Project>{93d0dad9-7849-3963-a6da-29eb4c8485e5}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Oasis\Shaders\FragmentShaderFile.glsl" />
+    <None Include="src\Oasis\Shaders\VertexShaderFile.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\Oasis\Text.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{BF2A15E9-0D92-4359-87EC-A07E5EC704D5}</ProjectGuid>

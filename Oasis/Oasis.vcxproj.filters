@@ -78,4 +78,11 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Oasis\Shaders\VertexShaderFile.glsl" />
+    <None Include="src\Oasis\Shaders\FragmentShaderFile.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\Oasis\Text.txt" />
+  </ItemGroup>
 </Project>
